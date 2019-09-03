@@ -26,6 +26,7 @@ export const TVApi = {
     
 };
 
+
 export const MoviesApi = {
     nowPlaying: () => api.get("movie/now_playing"),
     upcoming: () => api.get("movie/upcoming"),
