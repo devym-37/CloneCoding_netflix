@@ -24,8 +24,9 @@ const Item = styled.li`
   width: 80px;
   height: 50px;
   text-align: center;
-  border-bottom: 5px solid ${props => props.current ? "#3498db" : "transparent" };
-  transition:border-bottom 0.5s ease-in-out;
+  border-bottom: 5px solid
+    ${props => (props.current ? "#3498db" : "transparent")};
+  transition: border-bottom 0.5s ease-in-out;
 `;
 
 const SLink = styled(Link)`
@@ -35,7 +36,7 @@ const SLink = styled(Link)`
   justify-content: center;
 `;
 
-export default withRouter(({location:{pathname}}) => (
+export default withRouter(({ location: { pathname } }) => (
   <Header>
     <List>
       <Item current={pathname === "/"}>
@@ -49,4 +50,4 @@ export default withRouter(({location:{pathname}}) => (
       </Item>
     </List>
   </Header>
-));       // 다른 component를 감싼것이 withRouter
+)); // 다른 component를 감싼것이 withRouter
