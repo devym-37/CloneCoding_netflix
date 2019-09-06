@@ -1,6 +1,6 @@
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
-import { MoviesApi, TVApi } from "../../api";
+import { moviesApi, tvApi } from "../../api";
 
 export default class extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ export default class extends React.Component {
       },
       history: { push }
     } = this.props;
-    const { isMovie } = this.state; // url 주소 검사
+    const { isMovie } = this.state;
     const parsedId = parseInt(id);
     if (isNaN(parsedId)) {
       return push("/");
@@ -31,9 +31,9 @@ export default class extends React.Component {
     let result = null;
     try {
       if (isMovie) {
-        ({ data: result } = await MoviesApi.movieDetail(parsedId));
+        ({ data: result } = await moviesApi.movieDetail(parsedId));
       } else {
-        ({ data: result } = await TVApi.showDetail(parsedId));
+        ({ data: result } = await tvApi.showDetail(parsedId));
       }
     } catch {
       this.setState({ error: "Can't find anything." });
@@ -44,7 +44,6 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    console.log(result);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
