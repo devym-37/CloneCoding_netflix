@@ -27,3 +27,7 @@ Learning React and ES6 by building a Movie Discovery App.
 - [ ] Collections Link
 - [ ] Collection Router
 - [ ] On TV Show
+
+## Deploy
+
+- github page : https://Dev-miniyoung.github.io/CloneCoding_netflix
