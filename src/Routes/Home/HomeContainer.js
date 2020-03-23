@@ -7,6 +7,7 @@ export default class extends React.Component {
     nowPlaying: null,
     upcoming: null,
     popular: null,
+    topRated: null,
     error: null,
     loading: true
   };
@@ -22,10 +23,14 @@ export default class extends React.Component {
       const {
         data: { results: popular }
       } = await moviesApi.popular();
+      const {
+        data: { results: topRated }
+      } = await moviesApi.topRated();
       this.setState({
         nowPlaying,
         upcoming,
-        popular
+        popular,
+        topRated
       });
     } catch {
       this.setState({
@@ -39,12 +44,20 @@ export default class extends React.Component {
   }
 
   render() {
-    const { nowPlaying, upcoming, popular, error, loading } = this.state;
+    const {
+      nowPlaying,
+      upcoming,
+      popular,
+      topRated,
+      error,
+      loading
+    } = this.state;
     return (
       <HomePresenter
         nowPlaying={nowPlaying}
         upcoming={upcoming}
         popular={popular}
+        topRated={topRated}
         error={error}
         loading={loading}
       />

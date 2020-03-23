@@ -11,7 +11,14 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
+const HomePresenter = ({
+  nowPlaying,
+  popular,
+  upcoming,
+  topRated,
+  loading,
+  error
+}) => (
   <>
     <Helmet>
       <title>Movie | CloneFlix</title>
@@ -30,7 +37,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
                 title={movie.original_title}
                 rating={movie.vote_average}
                 year={movie.release_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
               />
             ))}
           </Section>
@@ -45,7 +52,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
                 title={movie.original_title}
                 rating={movie.vote_average}
                 year={movie.release_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
               />
             ))}
           </Section>
@@ -60,7 +67,22 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
                 title={movie.original_title}
                 rating={movie.vote_average}
                 year={movie.release_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
+              />
+            ))}
+          </Section>
+        )}
+        {topRated && topRated.length > 0 && (
+          <Section title="Top Rated Movies">
+            {topRated.map(movie => (
+              <Poster
+                key={movie.id}
+                id={movie.id}
+                imageUrl={movie.poster_path}
+                title={movie.original_title}
+                rating={movie.vote_average}
+                year={movie.release_date.substring(0, 4)}
+                isMovie
               />
             ))}
           </Section>
@@ -75,6 +97,7 @@ HomePresenter.propTypes = {
   nowPlaying: PropTypes.array,
   popular: PropTypes.array,
   upcoming: PropTypes.array,
+  topRated: PropTypes.array,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string
 };

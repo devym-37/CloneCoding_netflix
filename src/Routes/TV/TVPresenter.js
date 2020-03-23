@@ -11,7 +11,14 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
+const TVPresenter = ({
+  topRated,
+  popular,
+  airingToday,
+  onTheAir,
+  loading,
+  error
+}) => (
   <>
     <Helmet>
       <title>TV Shows | CloneFlix</title>
@@ -30,7 +37,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
                 title={show.original_name}
                 rating={show.vote_average}
                 year={show.first_air_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
               />
             ))}
           </Section>
@@ -45,7 +52,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
                 title={show.original_name}
                 rating={show.vote_average}
                 year={show.first_air_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
               />
             ))}
           </Section>
@@ -60,7 +67,22 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
                 title={show.original_name}
                 rating={show.vote_average}
                 year={show.first_air_date.substring(0, 4)}
-                isMovie={true}
+                isMovie
+              />
+            ))}
+          </Section>
+        )}
+        {onTheAir && onTheAir.length > 0 && (
+          <Section title="On The Air">
+            {onTheAir.map(show => (
+              <Poster
+                key={show.id}
+                id={show.id}
+                imageUrl={show.poster_path}
+                title={show.original_name}
+                rating={show.vote_average}
+                year={show.first_air_date.substring(0, 4)}
+                isMovie
               />
             ))}
           </Section>
@@ -75,6 +97,7 @@ TVPresenter.propTypes = {
   topRated: PropTypes.array,
   popular: PropTypes.array,
   airingToday: PropTypes.array,
+  onTheAir: PropTypes.array,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string
 };
