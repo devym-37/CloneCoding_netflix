@@ -38,7 +38,7 @@
       "browser": true
     }
   },
-  "homepage": "https://Dev-miniyoung.github.io/nomflix",
+  "homepage": "https://Dev-miniyoung.github.io/CloneCoding_netflix",
   "browserslist": {
     "production": [
       ">0.2%",
