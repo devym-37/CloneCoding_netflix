@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/nomflix/static/js/main.0933ca79.chunk.js",
-    "main.js.map": "/nomflix/static/js/main.0933ca79.chunk.js.map",
-    "runtime~main.js": "/nomflix/static/js/runtime~main.cbbd33c8.js",
-    "runtime~main.js.map": "/nomflix/static/js/runtime~main.cbbd33c8.js.map",
-    "static/js/2.ccf25582.chunk.js": "/nomflix/static/js/2.ccf25582.chunk.js",
-    "static/js/2.ccf25582.chunk.js.map": "/nomflix/static/js/2.ccf25582.chunk.js.map",
-    "index.html": "/nomflix/index.html",
-    "precache-manifest.91267713be8ee20201d0e2604d990797.js": "/nomflix/precache-manifest.91267713be8ee20201d0e2604d990797.js",
-    "service-worker.js": "/nomflix/service-worker.js",
-    "static/media/Noimage.png": "/nomflix/static/media/Noimage.a511bad4.png"
+    "main.js": "/CloneCoding_netflix/static/js/main.0933ca79.chunk.js",
+    "main.js.map": "/CloneCoding_netflix/static/js/main.0933ca79.chunk.js.map",
+    "runtime~main.js": "/CloneCoding_netflix/static/js/runtime~main.cce6b077.js",
+    "runtime~main.js.map": "/CloneCoding_netflix/static/js/runtime~main.cce6b077.js.map",
+    "static/js/2.f3a1c54c.chunk.js": "/CloneCoding_netflix/static/js/2.f3a1c54c.chunk.js",
+    "static/js/2.f3a1c54c.chunk.js.map": "/CloneCoding_netflix/static/js/2.f3a1c54c.chunk.js.map",
+    "index.html": "/CloneCoding_netflix/index.html",
+    "precache-manifest.3b31e3c6c738c26d451f583d54f09c7a.js": "/CloneCoding_netflix/precache-manifest.3b31e3c6c738c26d451f583d54f09c7a.js",
+    "service-worker.js": "/CloneCoding_netflix/service-worker.js",
+    "static/media/Noimage.png": "/CloneCoding_netflix/static/media/Noimage.a511bad4.png"
   }
 }
